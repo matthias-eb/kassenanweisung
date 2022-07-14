@@ -32,6 +32,9 @@ app.engine('hbs', exphbs({
   extname: '.hbs',
   helpers: helpers
 }));
+app.use("/public/jquery", express.static(path.join(__dirname, "node_modules/jquery/dist")));
+app.use("/public/popperjs", express.static(path.join(__dirname, "node_modules/@popperjs/core/dist/umd")));
+app.use("/public/bootstrap", express.static(path.join(__dirname, "node_modules/bootstrap/dist")));
 app.use("/public/autocomplete", express.static(path.join(__dirname, "node_modules/@tarekraafat/autocomplete.js/dist")));
 app.use("/public", express.static(path.join(__dirname, 'public')));
 app.set('view engine', 'hbs');
