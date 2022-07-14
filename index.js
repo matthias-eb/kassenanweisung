@@ -32,7 +32,6 @@ app.engine('hbs', exphbs({
   extname: '.hbs',
   helpers: helpers
 }));
-app.use("/favicon.ico", express.static(path.join(__dirname, "public/fachschaftslogo.ico")));
 app.use("/public/jquery", express.static(path.join(__dirname, "node_modules/jquery/dist")));
 app.use("/public/popperjs", express.static(path.join(__dirname, "node_modules/@popperjs/core/dist/umd")));
 app.use("/public/bootstrap", express.static(path.join(__dirname, "node_modules/bootstrap/dist")));
